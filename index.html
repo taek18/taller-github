@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller Github</title>
+    <title>Tally App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Tally App</h1>
+        <button onclick="showCreateTallyPopup()">Create Tally</button>
+        <div id="tallies"></div>
+    </div>
+
+    <div id="createTallyPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeCreateTallyPopup()">&times;</span>
+            <label for="tallyName">Tally Name:</label>
+            <div class="input-container">
+                <input type="text" id="tallyName" class="bigger-input" placeholder="Enter tally name">
+                <button onclick="createTally()" class="smaller-button">Enter</button>
+            </div>
+            <button onclick="closeCreateTallyPopup()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
